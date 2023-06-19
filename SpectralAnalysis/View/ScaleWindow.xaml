@@ -1,0 +1,18 @@
+﻿<Window x:Class="SpectralAnalysis.View.ScaleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpectralAnalysis.View" xmlns:spectralanalysis="clr-namespace:SpectralAnalysis" d:DataContext="{d:DesignInstance Type=spectralanalysis:ScaleViewModel}"
+        mc:Ignorable="d"
+        Title="Масштабирование" Height="204" Width="517" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-6">
+        <TextBlock HorizontalAlignment="Left" Margin="173,16,0,0"  TextWrapping="Wrap" Text="Выберите множитель разрешения" VerticalAlignment="Top"/>
+        <Button Content="0,5" HorizontalAlignment="Left" Margin="173,97,0,0" Command="{Binding ScaleImageToMinCommand}"  VerticalAlignment="Top" Height="31" Width="30"/>
+        <Button Content="Назад" HorizontalAlignment="Center" Margin="0,147,0,0" Command="{Binding CloseWinCommand}"  VerticalAlignment="Top" Height="31" Width="62"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="322,97,0,0" Command="{Binding ScaleImageToMaxCommand}" VerticalAlignment="Top" Height="31" Width="30"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,37,0,0" TextWrapping="Wrap" Text="Для 3 и 6 каналов рекомендуется использовать иножитель 0,5" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,64,0,0" TextWrapping="Wrap" Text="Для 8 канала рекомендуется использовать иножитель 2" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
